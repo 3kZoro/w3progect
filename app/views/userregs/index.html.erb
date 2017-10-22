@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Userregs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Age</th>
+      <th>Email</th>
+      <th>City</th>
+      <th>Password</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @userregs.each do |userreg| %>
+      <tr>
+        <td><%= userreg.FirstName %></td>
+        <td><%= userreg.LastName %></td>
+        <td><%= userreg.Age %></td>
+        <td><%= userreg.Email %></td>
+        <td><%= userreg.City %></td>
+        <td><%= userreg.Password %></td>
+        <td><%= link_to 'Show', userreg %></td>
+        <td><%= link_to 'Edit', edit_userreg_path(userreg) %></td>
+        <td><%= link_to 'Destroy', userreg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Userreg', new_userreg_path %>

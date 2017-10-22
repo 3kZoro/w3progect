@@ -1,0 +1,47 @@
+<%= form_for(userreg) do |f| %>
+  <% if userreg.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(userreg.errors.count, "error") %> prohibited this userreg from being saved:</h2>
+
+      <ul>
+      <% userreg.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :FirstName %>
+    <%= f.text_field :FirstName %>
+  </div>
+
+  <div class="field">
+    <%= f.label :LastName %>
+    <%= f.text_field :LastName %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Age %>
+    <%= f.number_field :Age %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Email %>
+    <%= f.text_field :Email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :City %>
+    <%= f.text_field :City %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Password %>
+    <%= f.text_field :Password %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

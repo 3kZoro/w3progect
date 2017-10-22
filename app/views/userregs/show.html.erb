@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @userreg.FirstName %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @userreg.LastName %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @userreg.Age %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @userreg.Email %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @userreg.City %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @userreg.Password %>
+</p>
+
+<%= link_to 'Edit', edit_userreg_path(@userreg) %> |
+<%= link_to 'Back', userregs_path %>
